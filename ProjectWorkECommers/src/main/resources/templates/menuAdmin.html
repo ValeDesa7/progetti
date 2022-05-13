@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Menu Admin</title>
+<link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+	<div id="global">
+		<h3>Menù funzioni Admin</h3><br/>
+		<span class="inserimento" th:if="${prodotto}">Prodotto inserito!</span><br/><br/>
+		<table>
+			<tr><td><a th:href="@{/visualizzaProdottiAdmin}">Lista Prodotti</a></td></tr>
+			<tr><td><a th:href="@{/inserisciProdotto}">Inserisci Prodotto</a></td></tr>
+			<tr><td></td></tr>
+			<tr><td><a th:href="@{/logout}">Logout</a></td></tr>
+		</table>
+	</div>
+</body>
+</html>

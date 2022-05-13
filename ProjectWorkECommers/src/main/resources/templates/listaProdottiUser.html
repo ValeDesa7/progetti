@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lista Prodotti User</title>
+<link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+	<div id="global">
+	    <h3>Lista Prodotti</h3>
+	    <div th:if="${not#lists.isEmpty(prodotti)}">
+	        <table>
+	            <tr>
+	                <th>Id prodotto</th>
+	                <th>Nome prodotto</th>
+	                <th>Prezzo prodotto</th>
+	                <th>Codice prodotto</th>
+	                <th></th>
+	            </tr>
+	            <tr th:each="prodotto : ${prodotti}">
+	                <td th:text="${prodotto.idProdotto}"></td>
+	                <td th:text="${prodotto.nome}"></td>
+	                <td th:text="${prodotto.prezzo}"></td>
+	                <td th:text="${prodotto.codice}"></td>
+	                <td><a th:href="@{/aggiungiProdottoCarrello(codice=${prodotto.codice})}">Aggiungi al carrello</a></td>
+	            </tr>
+	        </table>
+	        <div class="center">
+	        	<a th:href="@{/}">Menù</a><br/>
+	        	<a th:href="@{/logout}">Logout</a>
+	        </div>
+	    </div>
+    </div>
+</body>
+</html> 

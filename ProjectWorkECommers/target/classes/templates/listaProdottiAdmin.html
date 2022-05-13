@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lista Prodotti Admin</title>
+<link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+	<div id="global">
+	    <h3>Lista Prodotti</h3>
+	    <div th:if="${not#lists.isEmpty(prodotti)}">
+	        <table>
+	            <tr>
+	                <th>Id prodotto</th>
+	                <th>Nome prodotto</th>
+	                <th>Prezzo prodotto</th>
+	                <th>Codice prodotto</th>
+	            </tr>
+	            <tr th:each="p : ${prodotti}">
+	                <td th:text="${p.idProdotto}"></td>
+	                <td th:text="${p.nome}"></td>
+	                <td th:text="${p.prezzo}"></td>
+	                <td th:text="${p.codice}"></td>
+	            </tr>
+	        </table>
+	        <div class="center">
+	        	<a th:href="@{/}">Menù</a><br/>
+	        	<a th:href="@{/logout}">Logout</a>
+	        </div>
+	    </div>
+    </div>
+</body>
+</html> 

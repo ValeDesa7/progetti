@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Login</title>
+<link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+	<div id="global">
+		<form method="POST" th:action="@{/effettuaLogin}" th:object="${criteri}">
+			<fieldset>
+				<legend>LOGIN</legend>
+				<p>
+					<label for="username">Username:</label>
+					<input type="text" th:field="*{username}"/><br/>
+					<span class="error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+				</p>
+				<p>
+					<label for="password">Password:</label>
+					<input type="password" th:field="*{password}"/><br/>
+					<span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+				</p>
+				<p id="buttons">
+					<input id="reset" type="reset" value="Pulisci">
+					<input id="submit" type="submit" value="Login">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

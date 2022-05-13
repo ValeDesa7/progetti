@@ -1,0 +1,46 @@
+#global {
+    text-align: left;
+    border: 1px solid #dedede;
+    background: #efefef;
+    width: 1100px;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+table, table td {
+  	border: 1px solid #cccccc;
+}
+
+table {
+	width: 100%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+td {
+	height: 40px;
+  	width: auto;
+  	text-align: center;
+  	vertical-align: middle;
+}
+
+h3 {
+	text-align:center;
+}
+
+.error {
+	color: red;
+}
+
+.center {
+  	margin: auto;
+  	width: 20%;
+ 	margin-top: 2%;
+}
+
+.left {
+  	box-align: left;
+  	width: 5%;
+  	margin-top: 2%;
+}

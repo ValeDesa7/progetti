@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Inserisci Prodotto</title>
+<link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+	<div id="global">
+		<form method="POST" th:action="@{/inserisciProdotto}" th:object="${prodotto}">
+			<fieldset>
+				<legend>INSERISCI UN PRODOTTO</legend>
+				<p>
+					<label for="nome">Nome prodotto:</label>
+					<input type="text" th:field="*{nome}"/><br/>
+					<span class="error" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+				</p>
+				<p>
+					<label for="prezzo">Prezzo prodotto:</label>
+					<input type="text" th:field="*{prezzo}"/><br/>
+					<span class="error" th:if="${#fields.hasErrors('prezzo')}" th:errors="*{prezzo}"></span>
+				</p>
+				<p>
+					<label for="codice">Codice prodotto:</label>
+					<input type="text" th:field="*{codice}"/><br/>
+					<span class="error" th:if="${#fields.hasErrors('codice')}" th:errors="*{codice}"></span>
+				</p>
+				<p id="buttons">
+					<input id="reset" type="reset" value="Pulisci">
+					<input id="submit" type="submit" value="Inserisci">
+				</p>
+			</fieldset>
+		</form>
+		<div class="left">
+			<a th:href="@{/}">Menù</a>
+			<a th:href="@{/logout}">Logout</a>
+		</div>
+	</div>
+</body>
+</html>

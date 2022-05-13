@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Menu User</title>
+<link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+	<div id="global">
+		<h3>Menù funzioni User</h3><br/>
+		<span class="acquisto" th:if="${prodotto}">Prodotto acquistato!</span><br/><br/>
+		<table>
+			<tr><td><a th:href="@{/visualizzaProdottiUser}">Lista Prodotti</a></td></tr>
+			<tr><td><a th:href="@{/visualizzaCarrello}">Vai al carrello</a></td></tr>
+			<tr><td></td></tr>
+			<tr><td><a th:href="@{/logout}">Logout</a></td></tr>
+		</table>
+	</div>
+</body>
+</html>
